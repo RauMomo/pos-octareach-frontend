@@ -1,0 +1,47 @@
+.bg {
+    justify-content: center;
+    align-items: center;
+    height: 100vw;
+    min-height: 100vw;
+    min-width: 100vw;
+    transform: scale(1);
+    transform-origin: top left;
+    position: absolute;
+    background: url('../../assets/images/photo-wide-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+    background-origin: border-box;
+    z-index: -999;
+}
+
+.card{
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+  @apply text-center align-middle p-8 flex flex-row w-1/2 h-full bg-white
+}
+
+.wrapperMainCard {
+    width: 50%;
+    height: calc(130vh);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    vertical-align: middle;
+    z-index: 1;
+    /* text-align: center;
+    display: flex;
+    flex-direction: column;
+    top: 100%;
+    position: absolute;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle; */
+}

@@ -1,0 +1,13 @@
+.button{
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 8px;
+  width: 100%;
+  margin: 4px 0;
+
+  @apply text-sm
+}
+
+.button:hover{
+  border: 0px solid;
+}

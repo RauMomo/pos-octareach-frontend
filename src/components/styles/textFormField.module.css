@@ -1,0 +1,13 @@
+.formFieldWrapper{
+  padding: 0;
+  margin-top: 16px;
+  text-align: left;
+  align-items: start;
+  justify-content: start;
+}
+
+.formInput{
+  border: 1px solid gray;
+  padding-left: 12px;
+  @apply mt-4 min-w-full h-8 bg-slate-100 rounded-sm focus:border-green-500 active:border-green-500 outline-none text-left leading-3 
+}

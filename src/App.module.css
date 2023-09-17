@@ -1,19 +1,28 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/utilities';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
+  height: 400px;
+  background-color: red;
 }
 
-.App-logo {
+.AppLogo {
   height: 40vmin;
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .AppLogo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
+.AppHeader {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,8 +33,14 @@
   color: white;
 }
 
-.App-link {
+.AppLink {
   color: #61dafb;
+}
+
+.formInput{
+  border: 1px solid gray;
+  padding-left: 12px;
+  @apply mt-4 min-w-full h-8 bg-slate-100 rounded-sm focus:border-green-500 active:border-green-500 outline-none text-left leading-3 
 }
 
 @keyframes App-logo-spin {
