@@ -4,7 +4,7 @@ import { useState } from "react";
 import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
 import styles from '../App.module.css';
 
-export const Dropdown = () => {
+export const AlternateDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedRole, setSelectedRole] = useState('Owner');
   // const [isStyleDropdown, setIsStyleDropdown] = useState(selectedDropdown);

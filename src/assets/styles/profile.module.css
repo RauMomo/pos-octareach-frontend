@@ -1,0 +1,56 @@
+.bodyWrapper{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  z-index: -999;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overscroll-behavior: auto;
+  @apply bg-cream place-content-center
+}
+
+.main{
+  margin: auto;
+  margin-left: 16px;
+  position: relative;
+  flex-grow: 1;
+  overflow-y: scroll;
+  z-index: 1;
+  @apply min-w-full w-3/4 mt-32 text-black
+}
+
+.userProfile{
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(10, 2, 30, 0.125);
+  border-radius: 0.25rem;
+}
+
+.userInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -40px;
+  z-index: 9;
+}
+
+.profilePicture{
+  border-radius: 50%;
+  border: 4px solid #fff;
+}
+
+.cardBody {
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}

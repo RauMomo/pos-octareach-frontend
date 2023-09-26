@@ -18,6 +18,7 @@ class App extends React.Component{
           <Routes>
             <Route path="/" component={auth ? <SignInPage /> : <DashboardPage />} />
             <Route path="/login" component={<ForgotPage />} />
+            <Route path="/login" component={<ForgotPage />} />
             <Route path="/forgot-password" component={<ForgotPage />} />
             <Route path="/reset-password" component={<ResetPage />} />
           </Routes>

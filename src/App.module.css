@@ -22,6 +22,13 @@
   }
 }
 
+@layer base{
+  html{
+    font-family: 'Inter var', sans-serif;
+    min-width: 100vw;
+  }
+}
+
 .AppHeader {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,6 +42,12 @@
 
 .AppLink {
   color: #61dafb;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 20px 1px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.08);
+  border: 0;
 }
 
 .formInput{

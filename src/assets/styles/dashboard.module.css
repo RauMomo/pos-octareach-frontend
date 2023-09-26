@@ -1,0 +1,177 @@
+html, body{
+  height: 100%;
+}
+
+.avatar{
+  vertical-align: middle;
+  border-radius: 50%;
+  height: 2em;
+  width: 2em;
+}
+
+.bodyWrapper{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  z-index: -999;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overscroll-behavior: auto;
+  @apply bg-cream place-content-center
+}
+/* 
+.sidebar {
+  z-index: -4;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+} */
+
+aside{
+    position: sticky;
+    overflow-y: auto;
+    z-index: 0;
+    flex-shrink: 0;
+    top: 0;
+    width: 150px;
+    margin-left: 150px;
+    height: 100vh;
+    
+    @apply pt-20
+}
+
+.main{
+  margin: auto;
+  margin-left: 16px;
+  position: relative;
+  flex-grow: 1;
+  overflow-y: scroll;
+  z-index: 1;
+  @apply min-w-full w-3/4 mt-32 text-black
+}
+
+main{
+  margin: auto;
+  position: relative;
+  flex-grow: 1;
+  height: 100%;
+  overflow-y: auto;
+}
+
+nav ul li a{
+    position: relative;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    display: table;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul li a p{
+    font-size: 11px;
+}
+
+.mainNav{
+    background-color: white;
+    border-radius: 10px;
+    border-width: 4px;
+}
+
+.buttonLi{
+  border-bottom-width: 1px;
+  @apply p-6 align-middle
+}
+
+.buttonLi:hover{
+  @apply text-main
+}
+
+.cardsRowWrapper{
+  width: calc(100vw - 180px);
+  flex-basis: 100%;
+  gap: 1em;
+  padding-top: 1em;
+  @apply flex flex-row flex-1 flex-shrink-0
+}
+
+.cardsWrapper{
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-basis: 100%;
+  display: flex;
+  overflow: hidden;
+  /* margin: auto; */
+  width: calc(100vw - 150px);
+  margin: 0;
+
+  @apply h-36
+}
+
+.cardContentWrapper{
+  box-sizing: border-box;
+  flex-basis: 100%;
+  @apply bg-white rounded-xl h-28 shadow-md justify-between flex flex-row text-center
+}
+
+.flippedIcon{
+  transform: scaleX(-1);
+  @apply fill-mainlight
+}
+
+.weekSalPurWrapper{
+  @apply col-start-1 col-end-8 bg-white rounded-md w-full h-[26rem] shadow-inner
+}
+
+.weekSalPurContentWrapper{
+  padding: 16px;
+  box-sizing: border-box;
+  background-size: cover;
+  display: flex;
+}
+
+.topSellProductWrapper{
+  @apply col-start-8 col-end-12 bg-white rounded-md w-[88%] h-full shadow-inner 
+}
+
+td{
+  padding: 8px 0;
+}
+
+th{
+  padding: 8px 0;
+  @apply font-semibold
+}
+
+.redBox{
+  border: 1px solid red;
+  padding: 2px;
+  border-collapse: collapse;
+
+  @apply text-sm text-alert
+}
+
+.stockAlertWrapper{
+  
+}
+
+.recentSalesWrapper{
+  @apply bg-white rounded-md w-[95%] h-full shadow-inner col-start-1 col-end-12
+}
+
+.footerContent{
+  flex-basis: 100%;
+  text-align: left;
+  @apply flex-1 flex flex-row flex-grow justify-start content-baseline
+}
+
+.footerChildContent{
+  @apply flex flex-col py-7 px-5 justify-start text-left items-start tracking-normal
+}

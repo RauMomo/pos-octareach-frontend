@@ -1,6 +1,7 @@
 import { Button, FormControl, FormLabel, Text } from '@chakra-ui/react';
 import { useFormik } from 'formik';
 import React, { useEffect } from "react";
+import toast, { Toaster } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import logo from '../../../src/assets/images/octareach-logo-label.png';
 import styles from '../../assets/styles/signin.module.css';
@@ -9,11 +10,11 @@ import OutlineButton from '../../components/outline_button';
 const SignInPage = () => {
   const navigate = useNavigate();
   const formik = useFormik({
-      initialValues: {
-        email: '',
-        password: ''
-      }
+    initialValues: {
+      email: '',
+      password: ''
     }
+  }
   );
 
   const { values, errors, setFieldValue } = formik;
@@ -42,6 +43,55 @@ const SignInPage = () => {
     setFieldValue("email", 'purchases@example.com');
     setFieldValue("password", 'admin');
   }
+  
+  var myPromise = async () => {
+    return setTimeout(navigate('/home'), 1000);
+  }
+  
+  var loginFunc = async () => {
+    toast.promise(
+      myPromise().then(() => clearTimeout(myPromise)),
+      {
+        loading: 'Loading',
+        success: (data) => (
+          <div className="min-w-full border-collapse w-80 overflow-hidden text-left">
+            <div className='border-b-2 '>
+              <p>Success!</p>
+            </div>
+            <div className='my-2'>
+              <p>Successfully Logged In</p>
+            </div>
+          </div>
+        ),
+        error: (err) => `This just happened: ${err.toString()}`,
+      },
+      {
+        style: {
+          animation: 'custom-enter 1s ease',
+          backgroundColor: "#E6F5E9",
+          fontWeight: '700',
+          textAlign: 'left',
+          lineHeight: '2.0',
+          margin: '0',
+          borderRadius: '0',
+          minWidth: '250px',
+          backgroundSize: 'cover',
+        },
+        success: {
+          duration: 30000,
+          className: 'bg-blue',
+          icon: null,
+          style: {
+            margin: '0',
+            padding: '0',
+          }
+      },
+      position: "top-right",
+      }
+    )
+  }
+
+  
 
   useEffect(() => {
     console.log(values);
@@ -71,7 +121,7 @@ const SignInPage = () => {
                           </FormControl>
                       </div>
                     </div>
-                    <Button className={styles.primaryBtn}>
+                    <Button className={styles.primaryBtn} onClick={loginFunc}>
                       <Text className={styles.btnTitle}>Sign In</Text>
                     </Button>
                     <Button variant={'ghost'}>
@@ -86,7 +136,19 @@ const SignInPage = () => {
                       <OutlineButton name='Purchases' color='text-secondary' onClick={handlePurchasesClick} />
                     </div>
                   </div>
-                  </div>
+              </div>
+              <Toaster gutter={0}
+                toastOptions={{
+                ariaProps: {
+                  "aria-live": 'off',
+                  role: 'status'
+                  },
+                  success: {
+                    style: {
+                      background: "#E6F5E9",
+                    }
+                  }
+              }} />
               </form>
           {/* <div className="rounded-sm items-center justify-center text-center absolute w-1/2 h-48 min-h-fit bg-white block top-1/2 left-1/2">
             <div className="flex w-full flex-row shrink-0">
